@@ -1,5 +1,6 @@
 <?php
     class Conectar extends PDO{
+        //private $hostBD='localhost:3307'; //Habilitar para el caso de mariaDB
         private $hostBD='localhost';
         private $nombreBD='almacen';
         private $usuarioBD='root';
