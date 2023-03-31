@@ -16,6 +16,7 @@
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Existencias</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -26,10 +27,11 @@
                     if(count($resultado)>0){
                         foreach ($resultado as $registro) {
                         echo '<tr>';
-                        echo '<th>'.$registro['Id'].'</th>';
-                        echo '<th>'.$registro['Nombre'].'</th>';
-                        echo '<th>'.$registro['Precio'].'</th>';
-                        echo '<th>'.$registro['Existencia'].'</th>';
+                        echo '<td>'.$registro['Id'].'</td>';
+                        echo '<td>'.$registro['Nombre'].'</td>';
+                        echo '<td>'.$registro['Precio'].'</td>';
+                        echo '<td>'.$registro['Existencias'].'</td>';
+                        echo'<td><a href="">Eliminar</a></td>';
                         echo '</tr>';
                         }
                     }

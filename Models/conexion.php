@@ -1,6 +1,6 @@
 <?php
     class Conectar extends PDO{
-        private $hostBD='localhost';
+        private $hostBD='localhost:3307';
         private $nombreBD='almacen';
         private $usuarioBD='root';
         private $passwordBD='';
@@ -11,7 +11,8 @@
                 usuarioBD,$this->passwordBD,array(PDO::ATTR_ERRMODE
                 =>PDO::ERRMODE_EXCEPTION));
             } catch (Exception $e) {
-                echo '<script>console.log('.$e.'); </script>';
+                echo '<script>console.log('.$e.');
+                 </script>';
                 exit;
                 
             }
