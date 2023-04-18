@@ -31,7 +31,6 @@
                         echo '<td>'.$registro['Nombre'].'</td>';
                         echo '<td>'.$registro['Precio'].'</td>';
                         echo '<td>'.$registro['Existencias'].'</td>';
-                        echo'<td><a href="">Eliminar</a></td>';
                         echo '</tr>';
                         }
                     }
