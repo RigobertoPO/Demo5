@@ -9,5 +9,21 @@
             $query->setFetchMode(PDO::FETCH_ASSOC);
             return $query->fetchAll();
         }
+        public function InsertarProducto($nombre,$precio,$existencias){
+           try {
+             include 'conexion.php';
+             $conecta=new Conectar();
+             $consulta=$conecta->prepare("INSERT INTO
+             Productos(Nombre,Precio,Existencias)
+             VALUES(:nombre,:precio,:existencias)");
+             $consulta->bindParam(":nombre",$nombre,PDO::PARAM_STR);
+             $consulta->bindParam(":precio",$precio,PDO::PARAM_STR);
+             $consulta->bindParam(":existencias",$existencias,PDO::PARAM_STR);
+             $consulta->execute();
+             return true;
+           } catch (Exception $e){
+                return false;
+           } 
+        }
     }
 ?>

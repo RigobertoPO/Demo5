@@ -9,6 +9,7 @@
 <body>
     <h1>Lista de productos</h1>
     <div>
+        <a href="nuevoProducto.php">Nuevo</a>
         <table>
             <thead>
                 <tr>
