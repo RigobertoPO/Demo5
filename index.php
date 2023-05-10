@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION['nombreUsuario'])){
+    $usuarioSesion=$_SESSION['nombreUsuario'];
+    $tipoSesion=$_SESSION['tipo'];
+}
+else{
+    $usuarioSesion='';
+    $tipoSesion='';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +32,15 @@
     </script>
 </head>
 <body>
+    <?php
+        if($usuarioSesion<>''){
+            echo '<label>'.$usuarioSesion.'</label>';
+            echo '<a href="logout.php">Cerrar Sesion</a>';
+        }
+        else{
+            echo '<a href="login.php">iniciar Sesion</a>';
+        }
+    ?>
     <h1>Lista de productos</h1>
     <div>
         <a href="nuevoProducto.php">Nuevo</a>
